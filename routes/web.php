@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Spatie\FlareClient\View;
 
@@ -30,6 +31,5 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+
+Route::resource('/contact', ContactController::class);

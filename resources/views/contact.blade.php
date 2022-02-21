@@ -2,7 +2,7 @@
 
 @section('main')
     <h1 class="mb-3">Contact Us</h1>
-    <form method="POST">
+    <form method="POST" action="{{ route('contact.store') }}">
         @csrf
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInput" placeholder="Nama" name="nama">
