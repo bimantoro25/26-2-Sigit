@@ -32,6 +32,7 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
+Route::get('/delete_contact/{id}', ContactController::class . '@destroy');
 
 Route::resource('/contact', ContactController::class);
 Auth::routes();
